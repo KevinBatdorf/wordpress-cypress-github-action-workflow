@@ -70,7 +70,7 @@ jobs:
           cd ${{ github.workspace }}
           cp ${{ github.workspace }} /usr/src/wordpress/wp-content/plugins/testing-wp-install
           sudo mkdir -p /usr/src/wordpress/wp-content/mu-plugins
-          cp ${{ github.workspace }}/.github/support/bypass-login /usr/src/wordpress/wp-content/mu-plugins
+          cp ${{ github.workspace }}/.github/support/bypass-login.php /usr/src/wordpress/wp-content/mu-plugins
           cp -R ${{ github.workspace }} /usr/src/wordpress/wp-content/plugins/testing-wp-install
           sudo rm -rf /usr/src/wordpress/wp-content/plugins/testing-wp-install/cypress
           sudo mv /usr/src/wordpress/* ${{ github.workspace }}
