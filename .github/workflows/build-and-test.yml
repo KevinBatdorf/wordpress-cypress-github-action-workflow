@@ -68,7 +68,7 @@ jobs:
           wp core install --url=http://localhost:8080 --title=Test --admin_user=wordpress --admin_password=wordpress \
             --admin_email=admin@local.test --skip-email --allow-root
           cd ${{ github.workspace }}
-          cp ${{ github.workspace }} /usr/src/wordpress/wp-content/plugins/testing-wp-install
+          cp -R ${{ github.workspace }} /usr/src/wordpress/wp-content/plugins/testing-wp-install
           sudo mkdir -p /usr/src/wordpress/wp-content/mu-plugins
           echo ${{ github.workspace }}/.github/workflows/support/bypass-login.ph
           ls -l ${{ github.workspace }}/.github/workflows/support/bypass-login.ph
