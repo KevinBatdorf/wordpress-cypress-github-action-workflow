@@ -1,8 +1,8 @@
 <?php
 /*
-*	Plugin Name: MetaGallery
-*	Description: MetaMeta Gallery plugin
-*	Author: Extendify
-*	Text Domain: metagallery
+*	Plugin Name: MyPLugin
+*	Description: Plugin description
+*	Author: Kevin
+*	Text Domain: myplugin
 *	Version: 0.1.0
 */
