@@ -1,5 +1,4 @@
-it('should get names of components', () => {
-    cy.visit('/')
-        .get('.site-description')
-        .should('contain.text', 'Just another WordPress site')
+it('should be able to login automatically and redirect to dashboard', () => {
+    cy.visit('/cypress')
+    cy.url().should('contain', 'wp-admin')
 })
