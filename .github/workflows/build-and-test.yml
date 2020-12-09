@@ -2,7 +2,7 @@ name: Build And Test
 on: [push, pull_request]
 jobs:
   plugin:
-    name: Plugin (PHP ${{ matrix.php }} - ${{ matrix.wp }})
+    name: Plugin (PHP ${{ matrix.php }} - WP ${{ matrix.wp }})
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -70,7 +70,7 @@ jobs:
           cd ${{ github.workspace }}
           cp ${{ github.workspace }} /usr/src/wordpress/wp-content/plugins/testing-wp-install
           sudo mkdir -p /usr/src/wordpress/wp-content/mu-plugins
-          cp ${{ github.workspace }}/.github/support/bypass-login.php /usr/src/wordpress/wp-content/mu-plugins
+          cp ${{ github.workspace }}/.github/workflows/support/bypass-login.php /usr/src/wordpress/wp-content/mu-plugins
           cp -R ${{ github.workspace }} /usr/src/wordpress/wp-content/plugins/testing-wp-install
           sudo rm -rf /usr/src/wordpress/wp-content/plugins/testing-wp-install/cypress
           sudo mv /usr/src/wordpress/* ${{ github.workspace }}
