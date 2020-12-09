@@ -67,6 +67,7 @@ jobs:
           wp config create --dbname=wordpress --dbuser=root --dbpass=root --allow-root --debug
           wp core install --url=http://localhost:8080 --title=Test --admin_user=wordpress --admin_password=wordpress \
             --admin_email=admin@local.test --skip-email --allow-root
+          wp rewrite structure '/%postname%'
           cd ${{ github.workspace }}
           sudo mkdir -p /usr/src/wordpress/wp-content/mu-plugins
           sudo mv ${{ github.workspace }}/.github/workflows/support/bypass-login.php /usr/src/wordpress/wp-content/mu-plugins
