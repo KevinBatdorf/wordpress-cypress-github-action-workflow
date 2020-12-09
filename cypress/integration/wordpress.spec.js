@@ -9,6 +9,6 @@ it('should be able to login automatically and redirect to dashboard', () => {
     // wp submit
     cy.get('#wp-submit').click();
 
-    cy.location('pathname').should('eq', '/wp-admin/')
+    cy.location('pathname').should('be', 'wp-admin')
     cy.should('contain.text', 'dashboard')
 })
