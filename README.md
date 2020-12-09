@@ -1,1 +1,1 @@
-Proof on concept of booting up WP and testing it with Cypress
+Proof of concept on booting up WP and testing it with Cypress

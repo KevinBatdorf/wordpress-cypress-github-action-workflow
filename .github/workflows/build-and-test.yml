@@ -7,8 +7,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: [7.3]
-        wp: [5.5]
+        php: [7.3, 7.4]
+        wp: [5.5, 'nightly']
     services:
       mysql:
         image: mysql:5.7
