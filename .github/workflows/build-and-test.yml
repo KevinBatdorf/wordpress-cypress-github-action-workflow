@@ -69,7 +69,7 @@ jobs:
             --admin_email=admin@local.test --skip-email --allow-root
           cd ${{ github.workspace }}
           sudo mkdir -p /usr/src/wordpress/wp-content/mu-plugins
-          cp ${{ github.workspace }}/.github/workflows/support/bypass-login.php /usr/src/wordpress/wp-content/mu-plugins
+          mv ${{ github.workspace }}/.github/workflows/support/bypass-login.php /usr/src/wordpress/wp-content/mu-plugins
           cp -R ${{ github.workspace }} /usr/src/wordpress/wp-content/plugins/testing-wp-install
           sudo rm -rf /usr/src/wordpress/wp-content/plugins/testing-wp-install/cypress
           sudo mv /usr/src/wordpress/* ${{ github.workspace }}
