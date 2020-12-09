@@ -80,6 +80,11 @@ jobs:
       - name: Start PHP server
         run: nohup php -S localhost:8080 > php.log 2>&1 &
 
+      - name: Install NPM packages
+        run: npm ci
+        env:
+          CYPRESS_INSTALL_BINARY: "0"
+
       # https://github.com/bahmutov/cypress-gh-action-split-install
       - name: Cypress cache 1
         run: npx cypress cache path && npx cypress cache list
